@@ -30,9 +30,11 @@ urlpatterns = [
 
     # ORDERS
     path('orders/', include('orders.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # Configure Admin Titles
 admin.site.site_header = "FashionKart Admin Panel"
 admin.site.site_title ="FashionKart"
