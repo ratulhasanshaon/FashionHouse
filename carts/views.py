@@ -186,7 +186,7 @@ def cart(request, total=0, quantity=0, cart_items=None):
             total += (cart_item.product.price * cart_item.quantity)
             quantity += cart_item.quantity
 
-        tax = (16 * total ) / 100
+        tax = (15 * total ) / 100
         grand_total = total + tax
 
     except ObjectDoesNotExist:
@@ -216,7 +216,7 @@ def checkout(request, total=0, quantity=0, cart_items=None):
             total += (cart_item.product.price * cart_item.quantity)
             quantity += cart_item.quantity
 
-        tax = (16 * total ) / 100
+        tax = (15 * total ) / 100
         grand_total = total + tax
 
     except ObjectDoesNotExist:
